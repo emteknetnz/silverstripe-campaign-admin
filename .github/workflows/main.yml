@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  module_ci:
+  ci:
     uses: emteknetnz/octopus/.github/workflows/ci.yml@main
     with:
-      phpcs: false
+      require_extra: 'silverstripe/campaign-admin:1.50.x-dev as 1.9.x-dev'
