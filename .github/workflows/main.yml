@@ -9,16 +9,10 @@ on:
       - main
 
 jobs:
-  call-workflow:
+  call-workflow-passing-data:
     uses: emteknetnz/octopus/.github/workflows/ci.yml@main
-
-  # call-workflow-passing-data:
-  #   uses: emteknetnz/octopus/.github/workflows/ci.yml@main
-  #   with:
-  #     username: mona
-  #   secrets:
-  #     token: ${{ secrets.TOKEN }}
-
+    with:
+      phpcs: false
 
 # ####
 #
