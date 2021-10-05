@@ -5,9 +5,14 @@ name: Module CI
 on:
   push:
   pull_request:
+#   # every day at midnight:
+#   # currently about 1:30pm nzt
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   ci:
     uses: emteknetnz/octopus/.github/workflows/ci.yml@main
     with:
-      require_extra: 'silverstripe/campaign-admin:1.50.x-dev as 1.9.x-dev'
+      run_phplint: false
+    #   require_extra: 'silverstripe/campaign-admin:1.50.x-dev as 1.9.x-dev'
