@@ -14,5 +14,8 @@ jobs:
   ci:
     uses: emteknetnz/octopus/.github/workflows/ci.yml@main
     with:
-      run_phplint: false
+      run_endtoend: true
+      custom_jobs:
+        - php: 7.2
+          phplinting: true
     #   require_extra: 'silverstripe/campaign-admin:1.50.x-dev as 1.9.x-dev'
