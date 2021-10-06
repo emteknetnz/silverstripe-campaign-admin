@@ -10,6 +10,10 @@ Feature: Manage campaigns
       And I go to "/admin/campaigns"
 
   Scenario: I can create a campaign
+    #
+    Given I take a screenshot after every step
+    Given I dump the rendered HTML after every step
+    #
     When I press the "Add campaign" button
       Then I should see the "Form_campaignCreateForm" form
     When I fill in "Name" with "newcampaign"
@@ -18,23 +22,23 @@ Feature: Manage campaigns
     Then the "p.alert" element should contain "Nice one! You have successfully created a campaign."
       And the "Publish campaign" button should be disabled
 
-  Scenario: I can edit campaign
-    When I wait until I see the ".grid-field__table" element
-      And I edit the campaign "Test Campaign"
-    Then the "Name" field should contain "Test Campaign"
-      And the "Description" field should contain "this is a test"
-      And the "State" field should contain "open"
-      And I should see a "button.font-icon-tick[name=action_save]" element
-    When I fill in "Name" with "changed"
-    Then I should see a "button.font-icon-save[name=action_save]" element
-    When I fill in "Name" with "Test Campaign"
-    Then I should see a "button.font-icon-tick[name=action_save]" element
-    When I fill in "Name" with "Test campaign changed"
-      And I press the "Save" button
-      And I press the "Campaigns" button
-    Then I should see the campaign "Test campaign changed"
+  #Scenario: I can edit campaign
+  #  When I wait until I see the ".grid-field__table" element
+  #    And I edit the campaign "Test Campaign"
+  #  Then the "Name" field should contain "Test Campaign"
+  #    And the "Description" field should contain "this is a test"
+  #    And the "State" field should contain "open"
+  #    And I should see a "button.font-icon-tick[name=action_save]" element
+  #  When I fill in "Name" with "changed"
+  #  Then I should see a "button.font-icon-save[name=action_save]" element
+  #  When I fill in "Name" with "Test Campaign"
+  #  Then I should see a "button.font-icon-tick[name=action_save]" element
+  #  When I fill in "Name" with "Test campaign changed"
+  #    And I press the "Save" button
+  #    And I press the "Campaigns" button
+  #  Then I should see the campaign "Test campaign changed"
 
-  Scenario: I can delete a campaign
-    When I wait until I see the ".grid-field__table" element
-      And I delete the campaign "Test Campaign"
-    Then I should not see the campaign "Test Campaign"
+  #Scenario: I can delete a campaign
+  #  When I wait until I see the ".grid-field__table" element
+  #    And I delete the campaign "Test Campaign"
+  #  Then I should not see the campaign "Test Campaign"
