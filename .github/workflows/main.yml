@@ -6,8 +6,8 @@ on:
 
 jobs:
   ci:
-    # uses: silverstripe/github-actions-ci-cd/.github/workflows/ci.yml@main
-    uses: emteknetnz/octopus/.github/workflows/ci.yml@main
+    uses: silverstripe/github-actions-ci-cd/.github/workflows/ci.yml@main
+    # uses: emteknetnz/octopus/.github/workflows/ci.yml@main
 
 # https://docs.github.com/en/actions/learn-github-actions/reusing-workflows
 
