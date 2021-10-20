@@ -12,7 +12,7 @@
 ## Overview
 
 Provides a simple interface for managing versioned campaigns, provided by the 
-[versioned](https://github.com/silverstripe/silverstripe-versioned) SilverStripe module.
+[versioned](https://github.com/silverstripe/silverstripe-versioned) SilverStripe module. 
 
 This allows groups of changes to be published as a single atomic change, allowing items to be
 prepared for publishing in advance.
