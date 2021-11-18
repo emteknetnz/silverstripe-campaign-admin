@@ -1,4 +1,4 @@
-name: Module CI
+name: CI
 
 on:
   push:
