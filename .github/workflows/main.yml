@@ -6,7 +6,7 @@ on:
 
 jobs:
   ci:
-    uses: silverstripe/github-actions-ci-cd/.github/workflows/ci.yml@0.1.0
+    uses: emteknetnz/github-actions-ci-cd/.github/workflows/ci.yml@dynamic2
     with:
       run_endtoend: true
       run_js: true
