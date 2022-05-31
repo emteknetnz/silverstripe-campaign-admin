@@ -12,5 +12,5 @@ jobs:
           tag: mytag
           delete_existing: true
           release: true
-          body: 'this is "q my body'
-          generate_release_notes: true
+          body: 'this is my body'
+          generate_release_notes: false
