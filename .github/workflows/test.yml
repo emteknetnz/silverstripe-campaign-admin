@@ -1,0 +1,16 @@
+name: Test
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        uses: emteknetnz/gha-tag-release@main
+        with:
+          sha: 0b33b7c
+          tag: mytag
+          delete_existing: true
+          release: true
+          body: this is my body
+          generate_release_notes: false
