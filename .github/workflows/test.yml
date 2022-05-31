@@ -8,9 +8,9 @@ jobs:
       - name: Test
         uses: emteknetnz/gha-tag-release@main
         with:
-          sha: 0b33b7c38d793ff64a1649644702af7d49473cd5
+          sha: d1bb7a73ebeee96a3b315f86d1093bb5fca93b8b
           tag: mytag
           delete_existing: true
           release: true
-          body: this is my body
-          generate_release_notes: false
+          body: 'this is "q my body'
+          generate_release_notes: true
