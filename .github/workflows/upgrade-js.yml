@@ -5,5 +5,8 @@ on:
     - cron:  '0 0 1 */3 *'
   workflow_dispatch:
 jobs:
-  ci:
-    uses: silverstripe/github-actions-ci-cd/.github/workflows/update-js-deps.yml@0.1.15
+  update-js:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update JS
+        uses: emteknetnz/gha-update-js@main
