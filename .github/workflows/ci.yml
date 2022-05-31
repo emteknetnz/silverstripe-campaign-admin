@@ -7,5 +7,4 @@ on:
 
 jobs:
   ci:
-    uses: emteknetnz/github-actions-ci-cd/.github/workflows/ci.yml@dynamic2
-    
+    uses: emteknetnz/gha-ci/.github/workflows/ci.yml@main
