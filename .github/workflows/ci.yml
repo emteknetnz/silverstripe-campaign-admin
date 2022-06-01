@@ -9,4 +9,4 @@ jobs:
   ci:
     uses: emteknetnz/gha-ci/.github/workflows/ci.yml@main
     with:
-      composer_require_extra: silverstripe/mfa:* dnadesign/silverstripe-elemental:*
+      composer_require_extra: "silverstripe/mfa:* dnadesign/silverstripe-elemental:*"
