@@ -1,10 +1,12 @@
 name: CI
 
 on:
-  push:
-  pull_request:
+  #push:
+  #pull_request:
   workflow_dispatch:
 
 jobs:
   ci:
     uses: emteknetnz/gha-ci/.github/workflows/ci.yml@main
+    with:
+      composer_require_extra: silverstripe/mfa:* dnadesign/silverstripe-elemental:*
