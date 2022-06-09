@@ -13,5 +13,5 @@ jobs:
       extra_jobs: |
         - phpunit: true
           php: 8.0
-          db: psql
+          db: pgsql
           name_suffix: mysuffix
