@@ -10,3 +10,8 @@ jobs:
     uses: emteknetnz/gha-ci/.github/workflows/ci.yml@main
     with:
       composer_require_extra: silverstripe/mfa:^4 dnadesign/silverstripe-elemental:^4
+      extra_jobs: |
+        - phpunit: true
+          php: 8.0
+          db: psql
+          name_suffix: mysuffix
