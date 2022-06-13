@@ -7,7 +7,8 @@ on:
 
 jobs:
   ci:
-    uses: emteknetnz/gha-ci/.github/workflows/ci.yml@main
+    #uses: emteknetnz/gha-ci/.github/workflows/ci.yml@main
+    uses: silverstripe/gha-ci/.github/workflows/ci.yml@main
     with:
       composer_require_extra: silverstripe/mfa:^4 dnadesign/silverstripe-elemental:^4
       extra_jobs: |
