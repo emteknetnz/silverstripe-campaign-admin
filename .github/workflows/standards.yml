@@ -9,8 +9,7 @@ jobs:
     name: Standards
     runs-on: ubuntu-latest
     # test
-    permissions:
-      actions: write
+    permissions: write-all
     #
     steps:
       - name: Standards
