@@ -10,4 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Standards
-        uses: silverstripe/gha-standards@v1
+        #uses: silverstripe/gha-standards@v1
+        uses: emteknetnz/gha-standards@main
