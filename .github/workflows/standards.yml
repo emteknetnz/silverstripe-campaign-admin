@@ -1,0 +1,13 @@
+name: Standards
+on:
+  # Run on a schedule of the 5 day of each month
+  schedule:
+    - cron: '0 0 5 * *'
+  workflow_dispatch:
+jobs:
+  keepalive:
+    name: Standards
+    runs-on: ubuntu-latest
+    steps:
+      - name: Standards
+        uses: silverstripe/gha-standards@v1
