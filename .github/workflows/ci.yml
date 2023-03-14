@@ -12,5 +12,8 @@ jobs:
   ci:
     name: CI
     # Only run cron on the silverstripe account
-    if: (github.event_name == 'schedule' && github.repository_owner == 'silverstripe') || (github.event_name != 'schedule')
-    uses: silverstripe/gha-ci/.github/workflows/ci.yml@v1
+    # if: (github.event_name == 'schedule' && github.repository_owner == 'silverstripe') || (github.event_name != 'schedule')
+    uses: emteknetnz/gha-ci/.github/workflows/ci.yml@pulls/1/branches
+    with:
+      branch_major: latest
+      branch_minor: next-patch      
