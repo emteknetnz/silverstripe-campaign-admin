@@ -1,12 +1,12 @@
 name: CI
 
 on:
-  push:
-  pull_request:
+  #push:
+  #pull_request:
   workflow_dispatch:
   # Every Tuesday at 1:00pm UTC
-  schedule:
-    - cron: '0 13 * * 2'
+  # schedule:
+  #   - cron: '0 13 * * 2'
 
 jobs:
   ci:
@@ -14,6 +14,3 @@ jobs:
     # Only run cron on the silverstripe account
     # if: (github.event_name == 'schedule' && github.repository_owner == 'silverstripe') || (github.event_name != 'schedule')
     uses: emteknetnz/gha-ci/.github/workflows/ci.yml@pulls/1/branches
-    with:
-      branch_major: latest
-      branch_minor: next-patch      
