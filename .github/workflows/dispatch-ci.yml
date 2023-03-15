@@ -16,4 +16,4 @@ jobs:
     steps:
       - name: Dispatch CI
         #uses: silverstripe/gha-dispatch-ci@v1
-        uses: emteknetnz/gha-dispatch-ci@main
+        uses: emteknetnz/emt-gha-dispatch-ci@main
