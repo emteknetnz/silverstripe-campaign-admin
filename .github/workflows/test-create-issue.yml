@@ -12,7 +12,7 @@ jobs:
        
     steps:
       - name: Translation issue
-        uses: silverstripe/gha-issue@v1
+        uses: emteknetnz/gha-issue@main
         with:
           title: Run translations
           description: |
