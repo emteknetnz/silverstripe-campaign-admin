@@ -14,26 +14,39 @@ jobs:
       - name: Translation issue
         uses: emteknetnz/gha-issue@main
         with:
-          title: Run translations
+          title: JS pull-requests
           description: |
-            This is an automatically created issue used to run translations every 3 months.\n
+            This is an automatically created issue used to list automatically created\n
+            javascript pull requests every 3 months.\n
             \n
-            It was created by the `translation-issue.yml` workflow in the `silverstripe/.github` repository.\n
+            It was created by the `js-prs-issue.yml` workflow in the `silverstripe/.github` repository.\n
             \n
-            ### Triage instructions (Silverstripe Ltd CMS Squad):\n
+            ### Triage instructions (Silverstripe Ltd CMS Squad)\n
             1. Put on the following labels:\n
                - `type/enhancement`\n
                - `impact/low`\n
-               - `affects/v4`\n
                - `affects/v5`\n
             2. Move this issue to the "Ready" column on our internal zenhub board\n
             \n
-            ### Implementation instructions:\n
-            1. Create an install of kitchen-sink using the oldest supported minor branch e.g. 2.13\n
-            2. Also install [silverstripe/tx-translator](https://github.com/silverstripe/silverstripe-tx-translator/)\n
-            3. Follow the instructions in the `tx-translator` README.md and do a TX_PULL=1 TX_PUSH=0 run.\n
-            4. This will create lots of pull-requests. Paste links to these pull request on this issue.\n
-            5. Once the pull-requests have been merged, merge them up all the way to the next-minor branch e.g. `5`\n
-            6. Create new patch releases for all supported branches on all repositories that have new translations.\n
-            7. Create a new install of kitchen-sink using the next-minor branch e.g. `5` and also install `tx-translator` again.\n
-            8. Do another `tx-translator` run this time use TX_PULL=0 TX_PUSH=1.\n
+            ### Update JS pull-requests:\n
+            - [List of update JS pull-requests](https://emtek.net.nz/rhino/tables?t=open-prs&filters={%22title%22%3A%22DEP%20Update%20JS%20dependencies%22})\n
+            - Merge these PRs if there are no merge-conflicts\n
+            - If there are merge conflicts in some PRs, then close those PRs and run the steps below in the "Manually creating update JS pull-requests" section below for those relevant modules\n
+            \n
+            ### Manually creating update JS pull-requests:\n
+            1. Ensure you have the default branch checked out for the module you are updating e.g. `5`\n
+            2. Ensure `silverstripe/silverstripe-admin` is installed in a *sibling* directory\n
+            3. In the `silverstripe-admin` directory is checked out for its default branch e.g. `2`\n
+            4. In the `silverstripe-admin` directory, run `yarn install`\n
+            5. In the directory of module you're updating JS for, run `yarn upgrade` \n
+            6. Run `yarn build` in the directory of module you're updating JS for\n
+            7. Git commit, push the changes and create a pull-request\n
+            8. List the pull-request(s) on this issue\n
+            9. Move this issue to the peer review column on the CMS Squad internal zenhub board\n
+            \n
+            ### Dependabot pull-requests:\n
+            - [List of dependabot pull-requests](https://emtek.net.nz/rhino/tables?t=open-prs&filters={%22author%22%3A%22dependabot%22})\n
+            - Most of these should be automatically closed if the "Update JS pull-requests" above are merged\n
+            - You can make a judgement call as to whether to merge any easy ones that are left\n
+
+
