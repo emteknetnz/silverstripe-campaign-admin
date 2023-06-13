@@ -11,8 +11,29 @@ jobs:
     runs-on: ubuntu-latest
        
     steps:
-      - name: Create issue
-        uses: emteknetnz/gha-issue@main
+      - name: Translation issue
+        uses: silverstripe/gha-issue@v1
         with:
-          title: My issue title
-          description: This text will appear in the body of the GitHub issue
+          title: Run translations
+          description: |
+            This is an automatically created issue used to run translations every 3 months.
+
+            It was created by the `translation-issue.yml` workflow in the `silverstripe/.github` repository.
+
+            ### Triage instructions (Silverstripe Ltd CMS Squad):
+            1. Put on the following labels:
+               - `type/enhancement`
+               - `impact/low`
+               - `affects/v4`
+               - `affects/v5`
+            2. Move this issue to the "Ready" column on our internal zenhub board
+
+            ### Implementation instructions:
+            1. Create an install of kitchen-sink using the oldest supported minor branch e.g. 2.13
+            2. Also install [silverstripe/tx-translator](https://github.com/silverstripe/silverstripe-tx-translator/)
+            3. Follow the instructions in the `tx-translator` README.md and do a TX_PULL=1 TX_PUSH=0 run.
+            4. This will create lots of pull-requests. Paste links to these pull request on this issue.
+            5. Once the pull-requests have been merged, merge them up all the way to the next-minor branch e.g. `5`
+            6. Create new patch releases for all supported branches on all repositories that have new translations.
+            7. Create a new install of kitchen-sink using the next-minor branch e.g. `5` and also install `tx-translator` again.
+            8. Do another `tx-translator` run this time use TX_PULL=0 TX_PUSH=1.
