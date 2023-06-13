@@ -16,7 +16,7 @@ jobs:
         with:
           title: JS pull-requests
           description: |
-            This is an automatically created issue used to list automatically created\n
+            This is an automatically created issue used to list automatically created
             javascript pull requests every 3 months.\n
             \n
             It was created by the `js-prs-issue.yml` workflow in the `silverstripe/.github` repository.\n
@@ -36,9 +36,9 @@ jobs:
             ### Manually creating update JS pull-requests:\n
             1. Ensure you have the default branch checked out for the module you are updating e.g. `5`\n
             2. Ensure `silverstripe/silverstripe-admin` is installed in a *sibling* directory\n
-            3. In the `silverstripe-admin` directory is checked out for its default branch e.g. `2`\n
+            3. In the `silverstripe-admin` directory, ensure the default branch is checked out e.g. `2`\n
             4. In the `silverstripe-admin` directory, run `yarn install`\n
-            5. In the directory of module you're updating JS for, run `yarn upgrade` \n
+            5. In the directory of module you're updating JS for, run `yarn upgrade`\n
             6. Run `yarn build` in the directory of module you're updating JS for\n
             7. Git commit, push the changes and create a pull-request\n
             8. List the pull-request(s) on this issue\n
@@ -48,5 +48,4 @@ jobs:
             - [List of dependabot pull-requests](https://emtek.net.nz/rhino/tables?t=open-prs&filters={%22author%22%3A%22dependabot%22})\n
             - Most of these should be automatically closed if the "Update JS pull-requests" above are merged\n
             - You can make a judgement call as to whether to merge any easy ones that are left\n
-
 
