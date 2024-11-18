@@ -8,4 +8,4 @@ on:
 jobs:
   ci:
     name: CI
-    uses: creative-commoners/gha-ci/.github/workflows/ci.yml@pulls/1/mysql84
+    uses: emteknetnz/gha-ci/.github/workflows/ci.yml@main
