@@ -33,4 +33,4 @@ jobs:
       - name: Update JS
         uses: emteknetnz/gha-update-js@main
         with:
-          branch: ${{ github.event.inputs.branch }}
+          branch_type: ${{ github.event.inputs.branch_type }}
