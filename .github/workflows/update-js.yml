@@ -6,9 +6,10 @@ on:
       branch:
         description: 'The branch to run action on'
         required: true
-        default: 'curr-major-next-minor'
+        default: 'schedule'
         type: choice
         options:
+          - 'schedule'
           - 'prev-major-curr-minor'
           - 'curr-major-curr-minor'
           - 'curr-major-next-minor'
