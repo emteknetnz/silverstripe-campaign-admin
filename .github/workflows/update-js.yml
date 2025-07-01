@@ -2,6 +2,16 @@ name: Update JS
 
 on:
   workflow_dispatch:
+    inputs:
+      branch:
+        description: 'The branch to run action on'
+        required: true
+        default: 'curr-major-next-minor'
+        type: choice
+        options:
+          - 'prev-major-curr-minor'
+          - 'curr-major-curr-minor'
+          - 'curr-major-next-minor'
   # At 4:20 AM UTC, on day 1 of the month, only in March and September
   schedule:
     - cron: '20 4 1,2,3 3,9 *'
@@ -21,3 +31,5 @@ jobs:
     steps:
       - name: Update JS
         uses: emteknetnz/gha-update-js@main
+        with:
+          branch: ${{ github.event.inputs.branch }}
